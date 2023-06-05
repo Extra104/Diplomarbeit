@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Diplomarbeit</title>
+
+</head>
+
+<style>
+    /* Überschrift 1*/
+    
+    h1 {
+        /*Farbe*/
+        color: black;
+        /*Fett*/
+        font-size: bold;
+        /*Größe*/
+        font-size: 66px;
+        /*in die Mitte Setzen*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 10vh;
+    }
+    /* Suchfeld in die Mitte geben*/
+    
+    php body {
+        display: center;
+        /* position und ausrichtung*/
+        justify-content: center;
+        /*Ausrichtung mittig*/
+        height: 60vh;
+        /*höhe*/
+    }
+    
+    form {
+        text-align: center;
+    }
+    
+    input[type="SF"] {
+        width: 300px;
+        height: 40px;
+        /* Weitere gewünschte Stile */
+    }
+    /*Button größe*/
+    
+    .tt {
+        height: 46px;
+        width: 150px;
+    }
+    /* Hintergrundfarben verändern */
+    
+    body {
+        background-image: linear-gradient(-45deg, #337599, #adc8d6, #dfac20, #e9ac9b, #c32e04);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+    }
+    
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    /*-- Bild schwebden */
+    
+    .gallery {
+        width: 40em;
+        height: 15em;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    
+    @media (min-width: 10em) {
+        .gallery {
+            width: 40em;
+            height: 30em;
+        }
+    }
+    
+    @media (max-width: 60em) {
+        .gallery {
+            width: 100%;
+            height: 45em;
+        }
+    }
+    
+    .gallery figure {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .gallery figcaption {
+        position: absolute;
+        left: 1em;
+        bottom: 1em;
+        color: white;
+    }
+    
+    .gallery img {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    /*Animation */
+    
+    .gallery figure {
+        height: 100%;
+        animation: slide 12s infinite ease-in-out;
+    }
+    
+    .gallery:hover figure {
+        animation-play-state: paused;
+    }
+    
+    @keyframes slide {
+        0% {
+            top: 0
+        }
+        12% {
+            top: 0
+        }
+        16% {
+            top: -100%
+        }
+        28% {
+            top: -100%
+        }
+        32% {
+            top: -200%
+        }
+        44% {
+            top: -200%
+        }
+        48% {
+            top: -300%
+        }
+        60% {
+            top: -300%
+        }
+        65% {
+            top: -400%
+        }
+        78% {
+            top: -400%
+        }
+        83% {
+            top: -500%
+        }
+        95% {
+            top: -500%
+        }
+        100% {
+            top: 0
+        }
+    }
+</style>
+
+<body>
+
+    <h1>
+        <!--Überschrift 1-->
+        <u> <!--Unterstrichen-->
+            <p>
+                Schüler der 4BHEL 
+            </p>
+         </u>
+    </h1>
+
+    <!--Suchfenster-->
+    <form action="/Suchen" method="get">
+        <!--Kasten des Suchfensters-->
+        <input type="SF" name="Gebe den Suchbegriff ein" placeholder="Eingeben: Name des Schülers ">
+        <!-- Button des Suchfensert-->
+        <button class="tt" type="submit">
+            Suchen
+        </button>
+
+    </form>
+    <!--Hintergrund star -->
+    <!--
+    <center>
+        <img src="5.png" alt="Bild" width="600" height="420" />
+        </div>
+    </center>
+      -->
+    <!-- Hintergrund flexibel-->
+
+    <center>
+        <p>
+            <div class="gallery">
+                <figure>
+                    <img src="5.png" />
+                </figure>
+                <figure>
+                    <img src="1.jpeg" />
+                </figure>
+                <figure>
+                    <img src="2.jpeg" />
+                </figure>
+                <figure>
+                    <img src="3.jpg" />
+                </figure>
+                <figure>
+                    <img src="4.png" />
+                </figure>
+            </div>
+        </p>
+    </center>
+
+</body>
+
+</html>
